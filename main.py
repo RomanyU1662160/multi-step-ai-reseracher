@@ -25,7 +25,6 @@ async def main() -> None:
 
     research_coordinator = ResearchCoordinator(topic)
     report = await research_coordinator.research()
-    console.print(Panel("[bold cyan] Final Report Generated [/bold cyan]"))
     for paragraph in report:
         console.print(paragraph)
         console.print()  # Add an extra newline for better readability

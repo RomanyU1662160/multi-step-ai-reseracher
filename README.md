@@ -203,18 +203,7 @@ for topic in topics:
     results.append(result)
 ```
 
-## 🐛 Troubleshooting
 
-### Common Issues
-
-1. **Import Error**: `No name 'SearchResult' in module 'models.search_result'`
-   - **Solution**: Ensure `models/__init__.py` exists (create empty file if needed)
-
-2. **API Rate Limits**
-   - **Solution**: Add delays between requests or use API key with higher limits
-
-3. **Web Scraping Blocks**
-   - **Solution**: The system uses proper User-Agent headers and respectful scraping
 
 ### Debug Mode
 
@@ -232,9 +221,7 @@ uv run python main.py
 4. Add tests if applicable
 5. Submit a pull request
 
-## 📄 License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## 🙏 Acknowledgments
 

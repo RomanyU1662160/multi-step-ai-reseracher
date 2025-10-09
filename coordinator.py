@@ -109,5 +109,7 @@ class ResearchCoordinator:
         report_input = f"Original Topic: {original_topic}\n\nSearch Results Summaries:\n\n{collective_summary}"
         with console.status("[bold cyan] Generating Report... [/bold cyan]"):
             result = await Runner.run(report_agent, input=report_input)
-
+            with open(f"report-{time.time()}.md", "w") as f:
+                f.write(result.final_output)
+            console.print(Panel(f"[bold cyan] Final Report Generated in report-{time.time()}.md [/bold cyan]"))
             return result.final_output.split("\n\n")
